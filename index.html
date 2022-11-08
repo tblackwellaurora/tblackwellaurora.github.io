@@ -3,48 +3,31 @@
   <head>Become Sunny!
     <meta charset="utf-8">
     <title>Become Sunny!</title>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NN4QJWS">
-      console.log("am i here");
-    </script>
     <script
       id="auroraLCAI"
       data-org-id="e6034538-f9e8-4ef2-9c07-d25a057cd33e"
       src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
       type="text/javascript">
     </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'GTM-NN4QJWS');
-    </script>
   </head>
 
   <body>
-    <div id="lcaiWidget"  class="container px-5 my-5">
 
+    <div id="lcaiWidget"  class="container px-5 my-5">
     </div>
 
     <footer>
       <script>
-        console.log("22");
         window.AuroraLeadCaptureAsyncInit = () => {
-          const contactCallback = (contact) => {
-            gtag('event', 'contact_received');
-            console.log(contact);
-          };
-
-          AuroraLeadCapture.addEventListener('contact', contactCallback);
           const resultsCallback = (results) => {
-            gtag('event', 'results_displayed');
             console.log(results);
           };
           AuroraLeadCapture.addEventListener('results', resultsCallback);
-          console.log("52");
+          const contactCallback = (contact) => {
+            console.log(contact);
+          };
+          AuroraLeadCapture.addEventListener('contact', contactCallback);
         };
-
       </script>
     </footer>
   </body>
