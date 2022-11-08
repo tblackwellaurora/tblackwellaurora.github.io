@@ -12,10 +12,8 @@
       data-org-id="e6034538-f9e8-4ef2-9c07-d25a057cd33e"
       src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
       type="text/javascript">
-      console.log("48");
     </script>
     <script>
-      console.log("9");
       window.dataLayer = window.dataLayer || [];
       function gtag(){window.dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -35,18 +33,15 @@
         window.AuroraLeadCaptureAsyncInit = () => {
           const contactCallback = (contact) => {
             gtag('event', 'contact_received');
+            console.log(contact);
           };
 
           AuroraLeadCapture.addEventListener('contact', contactCallback);
-          console.log(contact);
-          console.log("44");
           const resultsCallback = (results) => {
             gtag('event', 'results_displayed');
+            console.log(results);
           };
-          console.log("48");
-
           AuroraLeadCapture.addEventListener('results', resultsCallback);
-          console.log(results);
           console.log("52");
         };
 
