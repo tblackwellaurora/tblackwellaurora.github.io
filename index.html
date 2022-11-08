@@ -41,12 +41,15 @@
 
           AuroraLeadCapture.addEventListener('contact', contactCallback);
           console.log(contactCallback);
+          console.log("44");
           const resultsCallback = (results) => {
             gtag('event', 'results_displayed');
           };
+          console.log("48");
 
           AuroraLeadCapture.addEventListener('results', resultsCallback);
           console.log(resultsCallback);
+          console.log("52");
         };
 
       </script>
