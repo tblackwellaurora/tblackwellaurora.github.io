@@ -19,6 +19,7 @@
 
     <footer>
       <script>
+        console.log("22");
         window.AuroraLeadCaptureAsyncInit = () => {
           const contactCallback = (contact) => {
             gtag('event', 'contact_received');
@@ -26,8 +27,10 @@
 
           AuroraLeadCapture.addEventListener('contact', contactCallback);
         };
+        console.log("30");
       </script>
       <script>
+        console.log("33");
         window.AuroraLeadCaptureAsyncInit = () => {
           const resultsCallback = (results) => {
             gtag('event', 'results_displayed');
@@ -35,13 +38,15 @@
 
           AuroraLeadCapture.addEventListener('results', resultsCallback);
         };
+        console.log("41");
       </script>
       <script
-    id="auroraLCAI"
-    data-org-id="16d565a6-1bce-4ccb-b322-a5b89c3527c2"
-    src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
-    type="text/javascript"
-  ></script>
+        id="auroraLCAI"
+        data-org-id="16d565a6-1bce-4ccb-b322-a5b89c3527c2"
+        src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
+        type="text/javascript">
+        console.log("48");
+      </script>
     </footer>
   </body>
 </html>
