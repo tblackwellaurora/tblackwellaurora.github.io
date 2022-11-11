@@ -3,33 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Become Sunny!</title>
-    <script
-      id="auroraLCAI"
-      data-org-id="41fbacd5-63a6-4788-bd5f-fa0c6f10174b"
-      src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
-      type="text/javascript">
-      // Initiate LCAI
-      window.AuroraLeadCaptureAsyncInit = () => {
-        // Open 1
-        // AuroraLeadCapture.open();
-        // Retrieves "results", the customer's estimated savings
-        const resultsCallback = (results) => {
-          console.log(results);
-        };
-        AuroraLeadCapture.addEventListener('results', resultsCallback);
 
-        // Retrieves "contact", the customer's contacnt info
-        const contactCallback = (contact) => {
-          console.log(contact);
-        };
-        AuroraLeadCapture.addEventListener('contact', contactCallback);
-        // Retrieves "lead"
-        const leadCallback = (lead) => {
-          console.log(lead);
-        };
-        AuroraLeadCapture.addEventListener('lead', leadCallback);
-      };
-    </script>
   </head>
 
   <body>
@@ -43,6 +17,33 @@
     </div>
 
     <footer>
+      <script
+        id="auroraLCAI"
+        data-org-id="41fbacd5-63a6-4788-bd5f-fa0c6f10174b"
+        src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
+        type="text/javascript">
+        // Initiate LCAI
+        window.AuroraLeadCaptureAsyncInit = () => {
+          // Open 1
+          // AuroraLeadCapture.open();
+          // Retrieves "results", the customer's estimated savings
+          const resultsCallback = (results) => {
+            console.log(results);
+          };
+          AuroraLeadCapture.addEventListener('results', resultsCallback);
+
+          // Retrieves "contact", the customer's contacnt info
+          const contactCallback = (contact) => {
+            console.log(contact);
+          };
+          AuroraLeadCapture.addEventListener('contact', contactCallback);
+          // Retrieves "lead"
+          const leadCallback = (lead) => {
+            console.log(lead);
+          };
+          AuroraLeadCapture.addEventListener('lead', leadCallback);
+        };
+      </script>
     </footer>
   </body>
 </html>
