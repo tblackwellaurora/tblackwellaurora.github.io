@@ -8,27 +8,42 @@
       data-org-id="41fbacd5-63a6-4788-bd5f-fa0c6f10174b"
       src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
       type="text/javascript">
+      // Initiate LCAI
+      window.AuroraLeadCaptureAsyncInit = () => {
+        // Open 1
+        // AuroraLeadCapture.open();
+        // Retrieves "results", the customer's estimated savings
+        const resultsCallback = (results) => {
+          console.log(results);
+        };
+        AuroraLeadCapture.addEventListener('results', resultsCallback);
+
+        // Retrieves "contact", the customer's contacnt info
+        const contactCallback = (contact) => {
+          console.log(contact);
+        };
+        AuroraLeadCapture.addEventListener('contact', contactCallback);
+        // Retrieves "lead"
+        const leadCallback = (lead) => {
+          console.log(lead);
+        };
+        AuroraLeadCapture.addEventListener('lead', leadCallback);
+      };
     </script>
   </head>
 
   <body>
-
-    <div id="lcaiWidget"  class="container px-5 my-5">
-    </div>
+    <nav>
+      <a href="/index.html"
+      <a href="/discovery_widget.html">Discovery Widget</a>
+      <a href="/button.html">Button!</a>
+      <a href="/open_or_setupCtas.html">JavaScript</a>
+    </nav>
+    <!-- Widget 1-->
+    <!-- <div class="lcaiWidget"  class="container px-5 my-5">
+    </div> -->
 
     <footer>
-      <script>
-        window.AuroraLeadCaptureAsyncInit = () => {
-          const resultsCallback = (results) => {
-            console.log(results);
-          };
-          AuroraLeadCapture.addEventListener('results', resultsCallback);
-          const contactCallback = (contact) => {
-            console.log(contact);
-          };
-          AuroraLeadCapture.addEventListener('contact', contactCallback);
-        };
-      </script>
     </footer>
   </body>
 </html>
