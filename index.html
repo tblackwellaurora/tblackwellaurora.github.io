@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head>Become Sunny!
     <meta charset="utf-8">
     <title>Become Sunny!</title>
     <script
@@ -12,39 +12,23 @@
   </head>
 
   <body>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/discovery_widget.html">Discovery Widget</a>
-      <a href="/button.html">Button!</a>
-    </nav>
-    <!-- Widget 1-->
-    <div class="lcaiWidget"  class="container px-5 my-5">
+
+    <div id="lcaiWidget"  class="container px-5 my-5">
     </div>
 
     <footer>
       <script>
-        // Initiate LCAI
         window.AuroraLeadCaptureAsyncInit = () => {
-          // Open 1
-          // AuroraLeadCapture.open();
-          // Retrieves "results", the customer's estimated savings
           const resultsCallback = (results) => {
             console.log(results);
           };
           AuroraLeadCapture.addEventListener('results', resultsCallback);
-
-          // Retrieves "contact", the customer's contacnt info
           const contactCallback = (contact) => {
             console.log(contact);
           };
           AuroraLeadCapture.addEventListener('contact', contactCallback);
-          // Retrieves "lead"
-          const leadCallback = (lead) => {
-            console.log(lead);
-          };
-          AuroraLeadCapture.addEventListener('lead', leadCallback);
         };
-        </script>
+      </script>
     </footer>
   </body>
 </html>
