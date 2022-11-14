@@ -2,14 +2,12 @@ nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   height: 20px;
   padding: 1.0rem;
   background-color: rgb(17, 26, 45);
-  font-color: white;
-  border-radius: 20px;
-  float: left;
+  color: rgb(255, 255, 255);
+  width: 100%;
 }
 
 html {
@@ -18,6 +16,8 @@ html {
 
 a {
   text-decoration: none;
+  float: left;
+  padding: 0px 15px 0px 15px;
 }
 
 a:link,a:visited {
@@ -34,4 +34,8 @@ a:active {
 
 .navi {
   width: 100%;
+}
+
+body {
+  margin: 0;
 }
