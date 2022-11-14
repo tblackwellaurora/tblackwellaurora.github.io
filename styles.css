@@ -39,3 +39,16 @@ a:active {
 body {
   margin: 0;
 }
+
+#lcaiButtonSection {
+  width: 100%;
+  height: 33%;
+}
+
+.lcaiCta {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: darkgreen;
+  border-color: white;
+  color: white;
+}
