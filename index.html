@@ -33,6 +33,10 @@
             console.log(contact);
           };
           AuroraLeadCapture.addEventListener('contact', contactCallback);
+          const leadCallback = (lead) => {
+            console.log(lead);
+          };
+          AuroraLeadCapture.addEventListener('lead', leadCallback);
         };
       </script>
     </footer>

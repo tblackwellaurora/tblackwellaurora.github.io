@@ -10,5 +10,21 @@ nav {
 }
 
 html {
-  font: Lato;
+  font: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,a:visited {
+  color: white;
+}
+
+a:hover {
+  color: gray;
+}
+
+a:active {
+  color: green;
 }
