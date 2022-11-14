@@ -2,10 +2,10 @@ nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: left;
+  align-items: center;
   justify-content: space-between;
   height: 20px;
-  padding: 2.0rem;
+  padding: 1.0rem;
   background-color: rgb(17, 26, 45);
   font-color: white;
   border-radius: 20px;
@@ -30,4 +30,8 @@ a:hover {
 
 a:active {
   color: green;
+}
+
+.navi {
+  width: 100%;
 }
