@@ -2,19 +2,22 @@ nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
+  height: 50px;
   padding: 0.5rem;
   background-color: rgb(17, 26, 45);
   font-color: white;
+  border-radius: 20px;
 }
 
 html {
-  font: Roboto;
+  font-family: Roboto;
 }
 
 a {
   text-decoration: none;
+  font-family: Lato;
 }
 
 a:link,a:visited {
