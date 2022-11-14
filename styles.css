@@ -1,4 +1,4 @@
-.nav {
+nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +8,6 @@
   padding-bottom: 0.5rem;
 }
 
-.head {
+head {
     font: Lato;
 }
