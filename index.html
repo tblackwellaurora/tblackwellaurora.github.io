@@ -8,6 +8,9 @@
       data-org-id="41fbacd5-63a6-4788-bd5f-fa0c6f10174b"
       src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
       type="text/javascript">
+      window.AuroraLeadCaptureAsyncInit = () => {
+          AuroraLeadCapture.open();
+      };
     </script>
   </head>
   <link rel="stylesheet" href="/styles.css">
@@ -25,7 +28,7 @@
     <div id="lcaiWidget"  class="container px-5 my-5">
     </div>
 
-    <footer>
+    <!-- <footer>
       <script>
         window.AuroraLeadCaptureAsyncInit = () => {
           AuroraLeadCapture.open();
@@ -43,6 +46,6 @@
           AuroraLeadCapture.addEventListener('lead', leadCallback);
         };
       </script>
-    </footer>
+    </footer> -->
   </body>
 </html>
