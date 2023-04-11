@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Become Sunny!</title>
     <script
+    window.AuroraLeadCaptureAsyncInit = () => {
+          AuroraLeadCapture.open();
+        };
       id="auroraLCAI"
       data-org-id="41fbacd5-63a6-4788-bd5f-fa0c6f10174b"
       src="https://autoroof.auslr.io/lead-capture-sdk-v1.js"
@@ -31,8 +34,7 @@
 
     <footer>
       <script>
-        window.AuroraLeadCaptureAsyncInit = () => {
-          AuroraLeadCapture.open();
+        
           // const resultsCallback = (results) => {
           //   console.log(results);
           // };
@@ -45,7 +47,7 @@
           //   console.log(lead);
           // };
           // AuroraLeadCapture.addEventListener('lead', leadCallback);
-        };
+        // };
       </script>
     </footer>
   </body>
