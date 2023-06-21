@@ -11,8 +11,8 @@
     <script type="module">
 
         const tenant_id = '16d565a6-1bce-4ccb-b322-a5b89c3527c2';
-        const jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU5ODQxNTFhLWZmZTMtNGQ1MC05MjY4LWQ2ZDE3YzFhOTkwMCIsImVtYWlsIjoidGJsYWNrd2VsbCtzZGt1c2VyQGF1cm9yYXNvbGFyLmNvbSIsImNsaWVudF9zZGsiOnRydWUsImVudmlyb25tZW50Ijoic2FuZGJveCIsImV4cCI6MTY4NzM2MzYwMSwianRpIjoiYjcyZGQ4OWQtMzRiYS00ODkyLThlZjUtNDAzZTdiZDUzNjVhIn0.NQYMi2UlTfvI5RmpPTO7YK5MtX-EraBmMfz8186Uudw";
-        const user_id = 'efe9050d-ff4c-467d-a8cf-569eefc4cf37';
+        //const jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU5ODQxNTFhLWZmZTMtNGQ1MC05MjY4LWQ2ZDE3YzFhOTkwMCIsImVtYWlsIjoidGJsYWNrd2VsbCtzZGt1c2VyQGF1cm9yYXNvbGFyLmNvbSIsImNsaWVudF9zZGsiOnRydWUsImVudmlyb25tZW50Ijoic2FuZGJveCIsImV4cCI6MTY4NzM2MzYwMSwianRpIjoiYjcyZGQ4OWQtMzRiYS00ODkyLThlZjUtNDAzZTdiZDUzNjVhIn0.NQYMi2UlTfvI5RmpPTO7YK5MtX-EraBmMfz8186Uudw";
+        const user_id = 'dd8cd75b-5402-4c60-bba6-c6da8fdd4ab7';
         const options = {
             method: 'POST',
             headers: {
@@ -22,9 +22,9 @@
             }
           };
           console.log("url: " + 'https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token')
-          //const response = await fetch('https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token', options)
-            //.then(response => console.log(response))
-            //.catch(err => console.error(err));
+          const response = await fetch('https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token', options)
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
         
         //jwt = response['token']['jwt'];
         //console.log("jwt: " + jwt);
