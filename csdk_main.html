@@ -11,34 +11,21 @@
     <script type="module">
 
         const tenant_id = '16d565a6-1bce-4ccb-b322-a5b89c3527c2';
-        const jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU5ODQxNTFhLWZmZTMtNGQ1MC05MjY4LWQ2ZDE3YzFhOTkwMCIsImVtYWlsIjoidGJsYWNrd2VsbCtzZGt1c2VyQGF1cm9yYXNvbGFyLmNvbSIsImNsaWVudF9zZGsiOnRydWUsImVudmlyb25tZW50Ijoic2FuZGJveCIsImV4cCI6MTY4NzM2MzYwMSwianRpIjoiYjcyZGQ4OWQtMzRiYS00ODkyLThlZjUtNDAzZTdiZDUzNjVhIn0.NQYMi2UlTfvI5RmpPTO7YK5MtX-EraBmMfz8186Uudw";
-        const user_id = '5984151a-ffe3-4d50-9268-d6d17c1a9900';
-        const options = {
-            method: 'POST',
-            headers: {
-              accept: 'application/json',
-              'content-type': 'application/json',
-              authorization: 'Bearer sk_sand_e3cccb9b7236924b258488bc',
-              'Access-Control-Allow-Origin': 'https://tblackwellaurora.github.io/'
-            }
-          };
-          console.log("url: " + 'https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token')
-          //const response = await fetch('https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token', options)
-            //.then(response => console.log(response))
-            //.catch(err => console.error(err));
+        const tenant_id_csdk = 'a2b5974f-5f3e-478e-83ae-5df94b624b0c';
+        const bearer_token = 'sk_sand_0a4db45c272aa51bd2bf64a5';
+        //const jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjU5ODQxNTFhLWZmZTMtNGQ1MC05MjY4LWQ2ZDE3YzFhOTkwMCIsImVtYWlsIjoidGJsYWNrd2VsbCtzZGt1c2VyQGF1cm9yYXNvbGFyLmNvbSIsImNsaWVudF9zZGsiOnRydWUsImVudmlyb25tZW50Ijoic2FuZGJveCIsImV4cCI6MTY4NzM2MzYwMSwianRpIjoiYjcyZGQ4OWQtMzRiYS00ODkyLThlZjUtNDAzZTdiZDUzNjVhIn0.NQYMi2UlTfvI5RmpPTO7YK5MtX-EraBmMfz8186Uudw";
+        //const user_id = '5984151a-ffe3-4d50-9268-d6d17c1a9900';
         
-        //jwt = response['token']['jwt'];
-        //console.log("jwt: " + jwt);
         
       const library = await import(
         'https://aurora-sdk.s3.amazonaws.com/client-sdk-loader.next.js'
       );
 
       const sdk = await library.load({
-        token: jwt
+        //token: jwt
         // or just user name and password when testing in sandbox
-        // username: '<user>',
-        // password: '<password>',
+        username: 'tblackwell+sdk@aurorasolar.com',
+        password: 'Har923Vest&',
       });
 
       console.log('SDK loaded', sdk);
@@ -48,7 +35,24 @@
       sdk.cad.attach('#cad-element');
 
       // Saving to window for testing
-      window.design = await sdk.design.load('d7c63b38-87d2-42a6-bef7-24f3cc233857');
+      window.design = await sdk.design.load('3b9a67e1-070a-4be6-b816-5d75c49fee7b');
     </script>
   </body>
 </html>
+<!-- const options = {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      authorization: 'Bearer sk_sand_e3cccb9b7236924b258488bc',
+      'Access-Control-Allow-Origin': 'https://tblackwellaurora.github.io/'
+    }
+  };
+  console.log("url: " + 'https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token') -->
+
+  <!-- //const response = await fetch('https://api-sandbox.aurorasolar.com/tenants/' + tenant_id + '/users/' + user_id + '/generate_token', options)
+  //.then(response => console.log(response))
+  //.catch(err => console.error(err));
+
+//jwt = response['token']['jwt'];
+//console.log("jwt: " + jwt); -->
