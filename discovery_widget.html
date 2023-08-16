@@ -35,23 +35,25 @@
   </body>
   <footer>
     <script>
-          
-      const contactCallback = (contact) => {
-        console.log(contact);
+      window.AuroraLeadCaptureAsyncInit = () => {
+        
+        const contactCallback = (contact) => {
+          console.log(contact);
+        };
+        
+        AuroraLeadCapture.addEventListener('contact', contactCallback);
+        
+        const leadCallback = (lead) => {
+          console.log(lead);
+        };
+        
+        AuroraLeadCapture.addEventListener('lead', leadCallback);
+        const resultsCallback = (results) => {
+          console.log(results);
+        };
+        
+        AuroraLeadCapture.addEventListener('results', resultsCallback);
       };
-      
-      AuroraLeadCapture.addEventListener('contact', contactCallback);
-      
-      const leadCallback = (lead) => {
-        console.log(lead);
-      };
-      
-      AuroraLeadCapture.addEventListener('lead', leadCallback);
-      const resultsCallback = (results) => {
-        console.log(results);
-      };
-      
-      AuroraLeadCapture.addEventListener('results', resultsCallback);
     </script>
   </footer>
 </html>
