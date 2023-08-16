@@ -53,11 +53,22 @@
       </script>
       <script>
           
-          AuroraLeadCapture.addEventListener('results', resultsCallback);
-          const resultsCallback = (results) => {
-            console.log(results);
+        const contactCallback = (contact) => {
+          console.log(contact);
         };
         
+        AuroraLeadCapture.addEventListener('contact', contactCallback);
+        
+        const leadCallback = (lead) => {
+          console.log(lead);
+        };
+        
+        AuroraLeadCapture.addEventListener('lead', leadCallback);
+        const resultsCallback = (results) => {
+          console.log(results);
+        };
+        
+        AuroraLeadCapture.addEventListener('results', resultsCallback);
       </script>
     </footer>
   </body>
