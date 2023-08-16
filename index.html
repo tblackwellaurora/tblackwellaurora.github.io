@@ -52,12 +52,10 @@
         // };
       </script>
       <script>
-        window.AuroraLeadCaptureAsyncInit = () => {
-          const resultsCallback = (results) => {
-            console.log(results);
-          };
           
           AuroraLeadCapture.addEventListener('results', resultsCallback);
+          const resultsCallback = (results) => {
+            console.log(results);
         };
         
       </script>
