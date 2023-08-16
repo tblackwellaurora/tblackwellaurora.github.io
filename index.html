@@ -21,7 +21,7 @@
     
     <nav>
       <a href="/index.html">Home</a>
-      <a href="/discovery_widget?utmSource=test.html">Discovery Widgets</a>
+      <a href="/discovery_widget?utm_source=test.html">Discovery Widgets</a>
       <a href="/csdk_main.html">CSDK</a>
     </nav>
 
@@ -52,23 +52,25 @@
         // };
       </script>
       <script>
+        window.AuroraLeadCaptureAsyncInit = () => {
+            
+          const contactCallback = (contact) => {
+            console.log(contact);
+          };
           
-        const contactCallback = (contact) => {
-          console.log(contact);
+          AuroraLeadCapture.addEventListener('contact', contactCallback);
+          
+          const leadCallback = (lead) => {
+            console.log(lead);
+          };
+          
+          AuroraLeadCapture.addEventListener('lead', leadCallback);
+          const resultsCallback = (results) => {
+            console.log(results);
+          };
+          
+          AuroraLeadCapture.addEventListener('results', resultsCallback);
         };
-        
-        AuroraLeadCapture.addEventListener('contact', contactCallback);
-        
-        const leadCallback = (lead) => {
-          console.log(lead);
-        };
-        
-        AuroraLeadCapture.addEventListener('lead', leadCallback);
-        const resultsCallback = (results) => {
-          console.log(results);
-        };
-        
-        AuroraLeadCapture.addEventListener('results', resultsCallback);
       </script>
     </footer>
   </body>
