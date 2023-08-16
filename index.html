@@ -53,13 +53,13 @@
       </script>
       <script>
         window.AuroraLeadCaptureAsyncInit = () => {
-            AuroraLeadCapture.open();
+          const resultsCallback = (results) => {
+            console.log(results);
           };
-        const resultsCallback = (results) => {
-          console.log(results);
+          
+          AuroraLeadCapture.addEventListener('results', resultsCallback);
         };
         
-        AuroraLeadCapture.addEventListener('results', resultsCallback);
       </script>
     </footer>
   </body>
